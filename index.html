@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Olá Mundo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar E-mail</title>
 </head>
 <body>
+    <h1>Enviar E-mail</h1>
+    <form action="envio.php" method="post">
+        <label for="destinatario">Destinatário:</label><br>
+        <input type="email" id="destinatario" name="destinatario" required><br><br>
 
-	<div>tudo certo</div>
+        <label for="assunto">Assunto:</label><br>
+        <input type="text" id="assunto" name="assunto" required><br><br>
 
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Enviar E-mail">
+    </form>
 </body>
 </html>
