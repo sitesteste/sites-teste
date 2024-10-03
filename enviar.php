@@ -1,3 +1,8 @@
+<Directory "/var/www/html">
+    AllowOverride All
+    Require all granted
+</Directory>
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obter dados do formulário
